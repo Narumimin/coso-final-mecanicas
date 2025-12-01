@@ -16,12 +16,12 @@ public class PlayerMovement : MonoBehaviour
     public float defaultHeight = 2f;
     public float crouchHeight = 1f;
     public float crouchSpeed = 3f;
-
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
     private CharacterController characterController;
-
     private bool canMove = true;
+    public Individual_Doors door;
+
 
     void Start()
     {
@@ -48,6 +48,15 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             moveDirection.y = movementDirectionY;
+        }
+
+        if (Input.GetKey(KeyCode.O))
+        {
+            door.Open_Door();
+        }
+        if (Input.GetKey(KeyCode.C))
+        {
+            door.Close_Door();
         }
 
         if (!characterController.isGrounded)

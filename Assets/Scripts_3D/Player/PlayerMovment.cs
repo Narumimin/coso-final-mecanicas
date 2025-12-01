@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController characterController;
     private bool canMove = true;
     public Individual_Doors door;
+    public bool agachado= false;
 
 
     void Start()
@@ -50,15 +51,6 @@ public class PlayerMovement : MonoBehaviour
             moveDirection.y = movementDirectionY;
         }
 
-        if (Input.GetKey(KeyCode.O))
-        {
-            door.Open_Door();
-        }
-        if (Input.GetKey(KeyCode.C))
-        {
-            door.Close_Door();
-        }
-
         if (!characterController.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
@@ -69,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
             characterController.height = crouchHeight;
             walkSpeed = crouchSpeed;
             runSpeed = crouchSpeed;
+            agachado = true;
 
         }
         else
@@ -76,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
             characterController.height = defaultHeight;
             walkSpeed = 6f;
             runSpeed = 6f;
+            agachado = false;
         }
 
         characterController.Move(moveDirection * Time.deltaTime);

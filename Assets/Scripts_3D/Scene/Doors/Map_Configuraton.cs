@@ -9,7 +9,7 @@ public class Map_Configuraton : MonoBehaviour
     public Individual_Doors door5;
     public int dia;
 
-    private void Update()
+    private void Start()
     {
         if (dia == 1)
         {

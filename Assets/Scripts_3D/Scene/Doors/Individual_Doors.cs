@@ -12,9 +12,4 @@ public class Individual_Doors : MonoBehaviour
     {
         animator.SetBool("character_nearby", false);
     }
-
-    void Update()
-    {
-        
-    }
 }

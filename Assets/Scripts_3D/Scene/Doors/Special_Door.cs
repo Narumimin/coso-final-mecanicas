@@ -6,13 +6,13 @@ public class Special_Door : MonoBehaviour
     public Individual_Doors door1;
     public Playeritems playeritems;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.O) && playeritems.gard_card)
+        if (Input.GetKey(KeyCode.O) && playeritems.master_key)
         {
             door1.Open_Door();
         }
-        if (Input.GetKeyDown(KeyCode.C) && playeritems.gard_card)
+        if (Input.GetKey(KeyCode.C) && playeritems.master_key)
         {
             door1.Close_Door();
         }

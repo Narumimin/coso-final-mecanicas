@@ -7,6 +7,7 @@ public class Map_Configuraton : MonoBehaviour
     public Individual_Doors door3;
     public Individual_Doors door4;
     public Individual_Doors door5;
+    public Individual_Doors door6;
     public int dia;
 
     private void Start()
@@ -18,6 +19,8 @@ public class Map_Configuraton : MonoBehaviour
             door3.Close_Door();
             door4.Close_Door();
             door5.Close_Door();
+            door6.Close_Door();
+
         }
         else
         {
@@ -26,6 +29,7 @@ public class Map_Configuraton : MonoBehaviour
             door3.Open_Door();
             door4.Open_Door();
             door5.Open_Door();
+            door6.Open_Door();
         }
     }
 

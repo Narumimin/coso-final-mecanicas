@@ -9,7 +9,7 @@ public class Playeritems : MonoBehaviour
     public bool gard_card = false;
     public bool master_key = false;
     public GameObject field_of_view_en1;
-    public GameObject field_of_view_en2;
+    public GameObject iNV_indic;
     public GameObject Item1, Item2, Item3, Item4;
     public Movment THISENEMY;
 
@@ -69,11 +69,11 @@ public class Playeritems : MonoBehaviour
     private IEnumerator Duration()
     {
         field_of_view_en1.SetActive(false);
-        field_of_view_en2.SetActive(false);
+        iNV_indic.SetActive(true);
         THISENEMY.currentstate = Movment.EnumStates.wait;
         yield return new WaitForSeconds(20);
         field_of_view_en1.SetActive(true);
-        field_of_view_en2.SetActive(true);
+        iNV_indic.SetActive(false);
         insisibilidad=false;
     }
 }

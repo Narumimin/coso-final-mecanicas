@@ -5,27 +5,41 @@ public class Special_Door : MonoBehaviour
 {
     public Individual_Doors door1;
     public Playeritems playeritems;
+    public GameObject Text;
+    public GameObject Advertence;
 
     public void Start()
     {
         door1.Close_Door();
+        Text.SetActive(false);
     }
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("Popo");
-        if (Input.GetKey(KeyCode.E) && playeritems.master_key)
+        Text.SetActive(true);
+        if (Input.GetKey(KeyCode.E))
         {
-            Debug.Log("Pepe");
-            Debug.Log(door1.door);
-            if (door1.door == false)
+            if (playeritems.master_key)
             {
-                door1.Open_Door();
+                if (door1.door == false)
+                {
+                    door1.Open_Door();
+                }
+                else
+                {
+                    door1.Close_Door();
+                }
             }
             else
             {
-                door1.Close_Door();
+                Advertence.SetActive(true);
             }
 
         }
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        Text.SetActive(false);
+        Advertence.SetActive(false);
     }
 }

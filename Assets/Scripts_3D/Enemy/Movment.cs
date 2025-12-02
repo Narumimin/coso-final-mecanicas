@@ -3,6 +3,7 @@ using System.Diagnostics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class Movment : MonoBehaviour
@@ -55,6 +56,7 @@ public class Movment : MonoBehaviour
         switch (currentstate)
         {
             case EnumStates.patrol:
+                prueba.SetActive(false);
                 if (agent.remainingDistance < 1)
                 {
                     currentTime = 0;
@@ -62,6 +64,7 @@ public class Movment : MonoBehaviour
                 }
                 break;
             case EnumStates.wait:
+                prueba.SetActive(false);
                 currentTime += Time.deltaTime;
                 if (currentTime > maxtimetowait)
                 {
@@ -71,8 +74,8 @@ public class Movment : MonoBehaviour
                 }
                 break;
             case EnumStates.chase:
+                prueba.SetActive(true);
                 agent.SetDestination(personaje.position);
-
                 if (agent.remainingDistance < 0.5)
                 {
                     currentTime = 0;
@@ -80,11 +83,10 @@ public class Movment : MonoBehaviour
                 }
                 break;
             case EnumStates.attak:
-                prueba.SetActive(true);
+                SceneManager.LoadScene(2);
                 if (agent.remainingDistance > 0.5)
                 {
                     currentTime = 0;
-                    prueba.SetActive(false);
                     currentstate = EnumStates.chase;
                 }
                 break;

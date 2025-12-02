@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Win_State : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Win_State : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) && playeritems.gard_card)
         {
-            // Load Win state maybe
+            SceneManager.LoadScene(3);
         }
     }
 }

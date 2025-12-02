@@ -8,7 +8,7 @@ public class Win_State : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey(KeyCode.O) && playeritems.gard_card)
+        if (Input.GetKey(KeyCode.E) && playeritems.gard_card)
         {
             // Load Win state maybe
         }

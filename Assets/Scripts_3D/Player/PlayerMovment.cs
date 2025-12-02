@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
     private float rotationX = 0;
     private CharacterController characterController;
     private bool canMove = true;
-    public Individual_Doors door;
     public bool agachado= false;
 
 

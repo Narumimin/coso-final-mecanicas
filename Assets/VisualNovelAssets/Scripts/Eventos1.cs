@@ -1000,7 +1000,7 @@ public class Eventos1 : MonoBehaviour
         yield return new WaitUntil(() => textLength == currentTextLength);
         if (skip)
         {
-            SceneManager.LoadScene("Main Menu");
+            SceneManager.LoadScene("Night_1");
         }
         else if (!skip)
         {
@@ -1008,7 +1008,7 @@ public class Eventos1 : MonoBehaviour
         }
         fadeOutScreen.SetActive(true);
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Night_1");
     }
 
     //C1O2 (FIRST CHOICE SECOND OPTION)
@@ -1219,7 +1219,7 @@ public class Eventos1 : MonoBehaviour
         yield return new WaitUntil(() => textLength == currentTextLength);
         if (skip)
         {
-            SceneManager.LoadScene("Main Menu");
+            SceneManager.LoadScene("Lose");
         }
         else if (!skip)
         {
@@ -1227,6 +1227,6 @@ public class Eventos1 : MonoBehaviour
         }
         fadeOutScreen.SetActive(true);
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Lose");
     }
 }

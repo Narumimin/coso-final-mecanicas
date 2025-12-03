@@ -8,7 +8,7 @@ public class TextCreator : MonoBehaviour
     public static int charCount;
     [SerializeField] string transferText;
     [SerializeField] int internalCount;
-    public static float textScrollSpeed = 0.03f;
+    public static float textScrollSpeed = 0.01f;
 
     // Update is called once per frame
     void Update()

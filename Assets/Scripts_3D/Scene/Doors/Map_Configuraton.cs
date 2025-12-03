@@ -8,11 +8,14 @@ public class Map_Configuraton : MonoBehaviour
     public Individual_Doors door4;
     public Individual_Doors door5;
     public Individual_Doors door6;
-    public int dia;
+    public int Noche;
+    public Individual_Doors door7;
+    public Individual_Doors door8;
+    public Individual_Doors door9;
 
     private void Start()
     {
-        if (dia == 1)
+        if (Noche == 1)
         {
             door1.Close_Door(); 
             door2.Close_Door();
@@ -22,15 +25,13 @@ public class Map_Configuraton : MonoBehaviour
             door6.Close_Door();
 
         }
-        else
+        if (Noche == 2)
         {
-            door1.Open_Door();
-            door2.Open_Door();
-            door3.Open_Door();
-            door4.Open_Door();
-            door5.Open_Door();
-            door6.Open_Door();
+            door7.Close_Door();
+            door8.Close_Door();
+            door9.Close_Door();
         }
+        
     }
 
 }

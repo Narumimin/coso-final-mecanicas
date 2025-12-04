@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1117766
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6203,7 +6203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Eventos2
   fadeInScreen: {fileID: 1346111621}
   fadeOutScreen: {fileID: 1391095773}
-  blackScreen: {fileID: 0}
+  blackScreen: {fileID: 1117765}
   titaniaStanding: {fileID: 151995077}
   titaniaShining: {fileID: 379196877}
   titaniaEmbarassed: {fileID: 496268831}

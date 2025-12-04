@@ -56,9 +56,12 @@ public class Eventos2 : MonoBehaviour
     public GameObject option4Alt;
     public GameObject option5Alt;
 
+    private string currentSceneName;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        currentSceneName = SceneManager.GetActiveScene().name;
         TextCreator.textScrollSpeed = 0.01f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -636,7 +639,7 @@ public class Eventos2 : MonoBehaviour
         yield return new WaitUntil(() => textLength == currentTextLength);
         if (skip)
         {
-            SceneManager.LoadScene("Lose");
+            SceneManager.LoadScene(currentSceneName);
         }
         else if (!skip)
         {
@@ -644,7 +647,7 @@ public class Eventos2 : MonoBehaviour
         }
         fadeOutScreen.SetActive(true);
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("Lose");
+        SceneManager.LoadScene(currentSceneName);
     }
 
     //C1O2 (FIRST CHOICE SECOND OPTION)
@@ -2868,7 +2871,7 @@ public class Eventos2 : MonoBehaviour
         yield return new WaitUntil(() => textLength == currentTextLength);
         if (skip)
         {
-            SceneManager.LoadScene("Lose");
+            SceneManager.LoadScene(currentSceneName);
         }
         else if (!skip)
         {
@@ -2876,7 +2879,7 @@ public class Eventos2 : MonoBehaviour
         }
         fadeOutScreen.SetActive(true);
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Lose");
+        SceneManager.LoadScene(currentSceneName);
     }
 
     //BEGINNING OF ALT PATH
@@ -3447,7 +3450,7 @@ public class Eventos2 : MonoBehaviour
         yield return new WaitUntil(() => textLength == currentTextLength);
         if (skip)
         {
-            SceneManager.LoadScene("Lose");
+            SceneManager.LoadScene(currentSceneName);
         }
         else if (!skip)
         {
@@ -3455,7 +3458,7 @@ public class Eventos2 : MonoBehaviour
         }
         fadeOutScreen.SetActive(true);
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Lose");
+        SceneManager.LoadScene(currentSceneName);
     }
     
     //C2O1ALT (SECOND CHOICE FIRST OPTION ALT)

@@ -9,6 +9,7 @@ public class Eventos1 : MonoBehaviour
     public GameObject fadeInScreen;
     public GameObject fadeOutScreen;
     public GameObject dedGuardInSpace;
+    public GameObject hallBG;
 
     [Header("Titania Sprites and stuff")]
     public GameObject titaniaStanding;
@@ -44,10 +45,13 @@ public class Eventos1 : MonoBehaviour
     public GameObject Choice1;
     public GameObject Choice2;
 
+    private string currentSceneName;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        currentSceneName = SceneManager.GetActiveScene().name;
         StartCoroutine(EventStarter());
     }
 
@@ -389,6 +393,7 @@ public class Eventos1 : MonoBehaviour
     }
     IEnumerator Event11()
     {
+        hallBG.SetActive(true);
         eventActive = true;
         titaniaStanding.SetActive(false);
         titaniaStandingRight.SetActive(true);
@@ -954,6 +959,7 @@ public class Eventos1 : MonoBehaviour
     }
     IEnumerator Event34()
     {
+        hallBG.SetActive(false);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
         textLines = "*She takes you back to your room, and goes to the door.*";
@@ -1229,7 +1235,7 @@ public class Eventos1 : MonoBehaviour
         yield return new WaitUntil(() => textLength == currentTextLength);
         if (skip)
         {
-            SceneManager.LoadScene("Lose");
+            SceneManager.LoadScene(currentSceneName);
         }
         else if (!skip)
         {
@@ -1237,7 +1243,7 @@ public class Eventos1 : MonoBehaviour
         }
         fadeOutScreen.SetActive(true);
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Lose");
+        SceneManager.LoadScene(currentSceneName);
     }
 
     //SKIP OPTION

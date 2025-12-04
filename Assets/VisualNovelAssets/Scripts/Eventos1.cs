@@ -16,6 +16,7 @@ public class Eventos1 : MonoBehaviour
     [Header("Stuff for text")]
     public GameObject NameText;
     public GameObject textBox;
+    public GameObject arrow;
     [SerializeField] string textLines;
     [SerializeField] int currentTextLength;
     [SerializeField] int textLength;
@@ -113,6 +114,7 @@ public class Eventos1 : MonoBehaviour
         secondSkipButton.SetActive(true);
         titaniaStanding.SetActive(true);
         textBox.SetActive(true);
+        arrow.SetActive(true);
         NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
         textLines = "Oh! You’re finally awake, dear, you humans sure do like to sleep a lot.";
         mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
@@ -1016,7 +1018,7 @@ public class Eventos1 : MonoBehaviour
         }
         else if (!skip)
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(2);
         }
         fadeOutScreen.SetActive(true);
         yield return new WaitForSeconds(1.5f);
@@ -1297,6 +1299,7 @@ public class Eventos1 : MonoBehaviour
     IEnumerator Event48()
     {
         eventActive = true;
+        VariablesGlobales.loveLevel -= 20;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
         textLines = "*She looks at you, with a frown that only conveys pure anger*";
         mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
@@ -1454,7 +1457,7 @@ public class Eventos1 : MonoBehaviour
         }
         else if (!skip)
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(2);
         }
         fadeOutScreen.SetActive(true);
         yield return new WaitForSeconds(1.5f);

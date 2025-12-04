@@ -17,6 +17,7 @@ public class Movment : MonoBehaviour
     public Transform personaje;
     public int Enemy_Damage = 20;
     public GameObject prueba;
+    public Playeritems personaje_ref;
 
     public enum EnumStates
     {
@@ -76,15 +77,15 @@ public class Movment : MonoBehaviour
             case EnumStates.chase:
                 prueba.SetActive(true);
                 agent.SetDestination(personaje.position);
-                if (agent.remainingDistance < 0.5)
+                if (agent.remainingDistance < 1)
                 {
                     currentTime = 0;
                     currentstate = EnumStates.attak;
                 }
                 break;
             case EnumStates.attak:
-                SceneManager.LoadScene(2);
-                if (agent.remainingDistance > 0.5)
+                SceneManager.LoadScene(personaje_ref.night_num);
+                if (agent.remainingDistance > 1)
                 {
                     currentTime = 0;
                     currentstate = EnumStates.chase;

@@ -12,6 +12,7 @@ public class Playeritems : MonoBehaviour
     public GameObject iNV_indic;
     public GameObject Item1, Item2, Item3, Item4;
     public Movment THISENEMY;
+    public int night_num;
 
     public void Start()
     {

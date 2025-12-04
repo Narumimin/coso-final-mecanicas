@@ -6,6 +6,7 @@ public class Cheats : MonoBehaviour
 {
     public GameObject[] Enemy;
     public bool active;
+    public int scenenum;
     private void OnTriggerStay(Collider other)
     {
         if (Input.GetKey(KeyCode.F1))
@@ -31,7 +32,7 @@ public class Cheats : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.F2))
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(scenenum);
         }
     }
 }

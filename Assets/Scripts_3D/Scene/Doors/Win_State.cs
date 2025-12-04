@@ -11,7 +11,7 @@ public class Win_State : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) && playeritems.gard_card)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
     }
 }

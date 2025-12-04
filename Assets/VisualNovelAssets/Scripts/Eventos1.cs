@@ -522,9 +522,9 @@ public class Eventos1 : MonoBehaviour
     }
     IEnumerator Event16()
     {   
-        titaniaStanding.SetActive(false);
+        titaniaStandingRight.SetActive(false);
         titaniaPissed.SetActive(true);
-        guardScared.SetActive(true);
+        guardScared.SetActive(false);
         disgustedGuard.SetActive(false);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
@@ -625,6 +625,7 @@ public class Eventos1 : MonoBehaviour
     IEnumerator Event20()
     {
         titaniaStanding.SetActive(true);
+        titaniaStandingRight.SetActive(false);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
         textLines = "*The Queen comes back out, no guard in sight. You give her a horrified look*";
@@ -1259,6 +1260,15 @@ public class Eventos1 : MonoBehaviour
     {
         skip = false;
         secondSkipButton.SetActive(false);
+        titaniaEmbarassed.SetActive(false);
+        titaniaPissed.SetActive(false);
+        titaniaShining.SetActive(false);
+        titaniaStanding.SetActive(false);
+        titaniaStandingRight.SetActive(false);
+        guardScared.SetActive(false);
+        guardStanding.SetActive(false);
+        disgustedGuard.SetActive(false);
+        dedGuardInSpace.SetActive(false);
         eventActive = true;
         TextCreator.runTextPrint = false;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";

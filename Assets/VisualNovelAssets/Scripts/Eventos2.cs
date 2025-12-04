@@ -9,11 +9,14 @@ public class Eventos2 : MonoBehaviour
 {
     public GameObject fadeInScreen;
     public GameObject fadeOutScreen;
+    public GameObject blackScreen;
 
     [Header("Titania Sprites and stuff")]
     public GameObject titaniaStanding;
     public GameObject titaniaShining;
     public GameObject titaniaEmbarassed;
+    public GameObject titaniaPissed;
+    public GameObject titaniaConcerned;    
 
     [Header("Stuff for text")]
     public GameObject NameText;
@@ -409,6 +412,8 @@ public class Eventos2 : MonoBehaviour
 
     IEnumerator Event8()
     {
+        titaniaStanding.SetActive(false);
+        titaniaPissed.SetActive(true);
         Choice1.SetActive(false);
         secondSkipButton.SetActive(false);
         bigAssButton.SetActive(true);
@@ -1439,6 +1444,7 @@ public class Eventos2 : MonoBehaviour
 
     IEnumerator Event50()
     {
+        titaniaConcerned.SetActive(false);
         titaniaEmbarassed.SetActive(false);
         titaniaShining.SetActive(false);
         titaniaStanding.SetActive(true);
@@ -1561,6 +1567,8 @@ public class Eventos2 : MonoBehaviour
     }
     IEnumerator Event55()
     {
+        titaniaStanding.SetActive(false);
+        titaniaConcerned.SetActive(true);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Titania";
         textLines = "Who?";
@@ -2617,6 +2625,8 @@ public class Eventos2 : MonoBehaviour
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     IEnumerator Event98()
     {
+        titaniaPissed.SetActive(true);
+        titaniaStanding.SetActive(false);
         VariablesGlobales.loveLevel += -20;
         bigAssButton.SetActive(true);
         Choice3.SetActive(false);
@@ -2736,6 +2746,8 @@ public class Eventos2 : MonoBehaviour
     }
     IEnumerator Event102()
     {
+        titaniaStanding.SetActive(false);
+        titaniaPissed.SetActive(true);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
         textLines = "ARE YOU SERIOUS?! I give you a second chance to behave and you decide to waste it. AGAIN?!";
@@ -2811,6 +2823,7 @@ public class Eventos2 : MonoBehaviour
     }
     IEnumerator Event105()
     {
+        blackScreen.SetActive(true);
         titaniaStanding.SetActive(false);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
@@ -3245,6 +3258,8 @@ public class Eventos2 : MonoBehaviour
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     IEnumerator Event122()
     {
+        titaniaStanding.SetActive(false);
+        titaniaPissed.SetActive(true);
         Choice2Alt.SetActive(false);
         bigAssButton.SetActive(true);
         eventActive = true;
@@ -3415,6 +3430,7 @@ public class Eventos2 : MonoBehaviour
     }
     IEnumerator Event129()
     {
+        blackScreen.SetActive(true);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
         textLines = "*You spend the rest of your days being experimented on.*\n*Every experiment is worse than the rest.*\n*You wish one of these experiments will kill you.*";

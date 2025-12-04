@@ -16,6 +16,7 @@ public class Eventos1 : MonoBehaviour
     public GameObject titaniaStandingRight;
     public GameObject titaniaShining;
     public GameObject titaniaEmbarassed;
+    public GameObject titaniaPissed;
 
     [Header("Guard Sprites")]
     public GameObject guardStanding;
@@ -521,6 +522,8 @@ public class Eventos1 : MonoBehaviour
     }
     IEnumerator Event16()
     {   
+        titaniaStanding.SetActive(false);
+        titaniaPissed.SetActive(true);
         guardScared.SetActive(true);
         disgustedGuard.SetActive(false);
         eventActive = true;
@@ -548,8 +551,7 @@ public class Eventos1 : MonoBehaviour
     IEnumerator Event17()
     {
         guardScared.SetActive(false);
-        titaniaStandingRight.SetActive(false);
-        titaniaStanding.SetActive(true);
+        titaniaPissed.SetActive(false);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
         textLines = "*Guards rush to the site, taking him to a room labeled with symbols you can’t seem to understand.*";
@@ -622,6 +624,7 @@ public class Eventos1 : MonoBehaviour
     }
     IEnumerator Event20()
     {
+        titaniaStanding.SetActive(true);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
         textLines = "*The Queen comes back out, no guard in sight. You give her a horrified look*";
@@ -812,6 +815,8 @@ public class Eventos1 : MonoBehaviour
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     IEnumerator Event28()
     {
+        titaniaPissed.SetActive(false);
+        titaniaStanding.SetActive(true);
         Choice1.SetActive(false);
         Choice2.SetActive(false);
         bigAssButton.SetActive(true);
@@ -1034,6 +1039,8 @@ public class Eventos1 : MonoBehaviour
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     IEnumerator Event37()
     {
+        titaniaStanding.SetActive(false);
+        titaniaPissed.SetActive(true);
         VariablesGlobales.loveLevel += -10;
         Choice1.SetActive(false);
         bigAssButton.SetActive(true);
@@ -1277,6 +1284,8 @@ public class Eventos1 : MonoBehaviour
     }
     IEnumerator Event47()
     {
+        titaniaStanding.SetActive(false);
+        titaniaPissed.SetActive(true);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
         textLines = "Are you even listening to me?";
@@ -1446,6 +1455,7 @@ public class Eventos1 : MonoBehaviour
     }
     IEnumerator Event54()
     {
+        titaniaPissed.SetActive(false);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
         textLines = "*She closes the door, leaving you alone with your thoughts. Waiting for the lights to go out in order to attempt your escape*";

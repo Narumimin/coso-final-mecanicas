@@ -28,6 +28,7 @@ public class Eventos2 : MonoBehaviour
     public GameObject skipButton;
     public GameObject bigAssButton;
     public GameObject secondSkipButton;
+    public GameObject exitButton;
     private int eventPos;
     private bool eventActive;
     private bool skip = false;
@@ -37,6 +38,9 @@ public class Eventos2 : MonoBehaviour
     public GameObject Choice1;
     public GameObject Choice2;
     public GameObject Choice3;
+    public GameObject Choice1Alt;
+    public GameObject Choice2Alt;
+    public GameObject Choice3Alt;
 
     [Header("Choice2 Crossroad")]
     public GameObject option1;
@@ -45,12 +49,28 @@ public class Eventos2 : MonoBehaviour
     public GameObject option4;
     public GameObject option5;
 
+    [Header("Choice3Alt Crossroad")]
+    public GameObject option1Alt;
+    public GameObject option2Alt;
+    public GameObject option3Alt;
+    public GameObject option4Alt;
+    public GameObject option5Alt;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        TextCreator.textScrollSpeed = 0.01f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        StartCoroutine(EventStarter());
+
+        if (VariablesGlobales.SkipDay1)
+        {
+            StartCoroutine(EventStarterAlt());
+        }
+        else
+        {
+            StartCoroutine(EventStarter());
+        }
     }
 
     // Update is called once per frame
@@ -85,16 +105,14 @@ public class Eventos2 : MonoBehaviour
     public void TotalSkip()
     {
         StopAllCoroutines();
-        VariablesGlobales.SkipDay1 = true;
-        eventPos = 46;
-        //StartCoroutine(Event46());
+        eventPos = 101;
+        StartCoroutine(Event101());
     }
     public void C1O1()
     {
         eventPos = 8;
         NextButton();
     }
-
     public void C1O2()
     {
         eventPos = 18;
@@ -105,7 +123,6 @@ public class Eventos2 : MonoBehaviour
         eventPos = 38;
         NextButton();
     }
-
     public void C2O1()
     {
         eventPos = 51;
@@ -126,7 +143,6 @@ public class Eventos2 : MonoBehaviour
         eventPos = 68;
         NextButton();
     }
-
     public void C2O5()
     {
         eventPos = 99;
@@ -137,10 +153,59 @@ public class Eventos2 : MonoBehaviour
         eventPos = 81;
         NextButton();
     }
-
     public void C3O2()
     {
         eventPos = 98;
+        NextButton();
+    }
+    public void C1O1Alt()
+    {
+        eventPos = 104;
+        NextButton();
+    }
+    public void C1O2Alt()
+    {
+        eventPos = 114;
+        NextButton();
+    }
+    public void C2O1Alt()
+    {
+        eventPos = 131;
+        NextButton();
+    }
+    public void C2O2Alt()
+    {
+        eventPos = 134;
+        NextButton();
+    }
+    public void C2O3Alt()
+    {
+        eventPos = 122;
+        NextButton();
+    }
+    public void C3O1Alt()
+    {
+        eventPos = 136;
+        NextButton();
+    }
+    public void C3O2Alt()
+    {
+        eventPos = 148;
+        NextButton();
+    }
+    public void C3O3Alt()
+    {
+        eventPos = 137;
+        NextButton();
+    }
+    public void C3O4Alt()
+    {
+        eventPos = 143;
+        NextButton();
+    }
+    public void C3O5Alt()
+    {
+        eventPos = 152;
         NextButton();
     }
 
@@ -152,8 +217,7 @@ public class Eventos2 : MonoBehaviour
         fadeInScreen.SetActive(true);
         yield return new WaitForSeconds(2);
         skipButton.SetActive(true);
-        secondSkipButton.SetActive(true);
-        titaniaStanding.SetActive(true);
+        exitButton.SetActive(true);
         textBox.SetActive(true);
         arrow.SetActive(true);
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
@@ -204,6 +268,7 @@ public class Eventos2 : MonoBehaviour
     IEnumerator Event2()
     {
         eventActive = true;
+        titaniaStanding.SetActive(true);
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
         textLines = "*She walks in right after you finish changing.*";
         mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
@@ -1795,7 +1860,7 @@ public class Eventos2 : MonoBehaviour
     IEnumerator Event67()
     {
         eventActive = true;
-        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Titania";
         textLines = "What <color=green>[frog sounds]</color> doesn’t know won’t hurt him.";
         mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
         currentTextLength = textLines.Length;
@@ -2583,6 +2648,7 @@ public class Eventos2 : MonoBehaviour
         skipButton.SetActive(false);
         secondSkipButton.SetActive(false);
         bigAssButton.SetActive(true);
+        exitButton.SetActive(false);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Titania";
         textLines = " Oh dear. Look at the time! It’s almost five blingajings past niffrin! I think it’s been enough supervising for today. I am going to go back to my beauty sleep, this face won’t stay this beautiful by itself.";
@@ -2607,10 +2673,1360 @@ public class Eventos2 : MonoBehaviour
     }
     IEnumerator Event100()
     {
-
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Titania";
         textLines = "Sleep tight, little experiment";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            SceneManager.LoadScene("Night_2");
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(2);
+        }
+        fadeOutScreen.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Night_2");
+    }
+
+    //ALT PATH
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //THE SKIP AGAIN OPTION
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    IEnumerator Event101()
+    {
+        skip = false;
+        secondSkipButton.SetActive(false);
+        eventActive = true;
+        TextCreator.runTextPrint = false;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*You start to disassociate, staring blankly at the queen’s-*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event102()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "ARE YOU SERIOUS?! I give you a second chance to behave and you decide to waste it. AGAIN?!";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event103()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*You struggle to get out of her grasp.*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event104()
+    {
+        secondSkipButton.SetActive(false);
+        Choice1Alt.SetActive(false);
+        bigAssButton.SetActive(true);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "This disrespect will NOT be tolerated, even less so TWICE. GUARDS!! Throw this… Thing *she said with disgust* off my ship. NOW!";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event105()
+    {
+        titaniaStanding.SetActive(false);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*They take you to some kind of hangar full with stuff that seems to be from previous specimens and guards she has done this to.*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event106()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*You’re scared, you try to fight off the guards but they are stronger than you.*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event107()
+    {
+        eventActive = true;
+        skipButton.SetActive(false);
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*You close your eyes…*\n*Never to open them again.*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            SceneManager.LoadScene("Lose");
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(2);
+        }
+        fadeOutScreen.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Lose");
+    }
+
+    //BEGINNING OF ALT PATH
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    IEnumerator EventStarterAlt()
+    {
+        //Primer evento
+        eventActive = true;
+        eventPos = 100;
+        fadeInScreen.SetActive(true);
+        yield return new WaitForSeconds(2);
+        skipButton.SetActive(true);
+        exitButton.SetActive(true);
+        secondSkipButton.SetActive(true);
+        titaniaStanding.SetActive(true);
+        textBox.SetActive(true);
+        arrow.SetActive(true);
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "* The Alien Quenn opens the door*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos = 108;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos = 108;
+        }
+    }
+    IEnumerator Event108()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "At least it seems you managed to behave during my slumber.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event109()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*You stand up from the bed, drowsy after spending the whole night running around the ship.*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event110()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "You";
+        textLines = "Mmng why are you here so early?";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event111()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "Well, we can’t leave our specimen unsupervised for so long, can we?";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event112()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*She gets closer and sits on the bed next to you*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event113()
+    {
+        bigAssButton.SetActive(false);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "Will you be more respectful towards the Queen this time around?";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        Choice1Alt.SetActive(true);
+        eventActive = false;
+    }
+
+    //C1O1ALT (FIRST CHOICE FIRST OPTION ALT)
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    IEnumerator Event114()
+    {
+        VariablesGlobales.loveLevel += 5;
+        Choice1Alt.SetActive(false);
+        bigAssButton.SetActive(true);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "You";
+        textLines = "I meant to ask… What makes me so special that the Queen herself is supervising me?";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event115()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "The specimen here is you, I don’t owe you any answers.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event116()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "You";
+        textLines = "Oh… I just thought…";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event117()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "But...";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event118()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*She looks at you*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event119()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "I suppose I could indulge you this once. I just found you interesting, hence why I decided to supervise you personally.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event120()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "I’m starting to consider that maybe I should have left you with our scientists anyway.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event121()
+    {
+        bigAssButton.SetActive(false);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*Her face turns into a disdainful one, so far she doesn’t find you amusing.*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        Choice2Alt.SetActive(true);
+        eventActive = false;
+    }
+
+    //C2O3ALT (SECOND CHOICE THIRD OPTION ALT)
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    IEnumerator Event122()
+    {
+        Choice2Alt.SetActive(false);
+        bigAssButton.SetActive(true);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "You really are just a disrespectful specimen, aren’t you?";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event123()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "You";
+        textLines = "No! Wait I’ll-";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event124()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "It’s too late for that.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event125()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "I thought that at the very least you would be amusing to supervise. It seems this is the first time I’ve ever been wrong about something.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event126()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "Guards! Take the specimen to the laboratory, any right it had has been revoked.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event127()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*They take you to the laboratory, the first place you saw of this ship.*\n*And now the last you will ever see.*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event128()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "I’ll personally make sure you go through every single test we have yet to make. And if you do not manage to survive all of them, we’ll just borrow another specimen. Goodbye.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event129()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*You spend the rest of your days being experimented on.*\n*Every experiment is worse than the rest.*\n*You wish one of these experiments will kill you.*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event130()
+    {
+        eventActive = true;
+        skipButton.SetActive(false);
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*But the truth is…*\n- *You will never escape.*\r";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            SceneManager.LoadScene("Lose");
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(2);
+        }
+        fadeOutScreen.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Lose");
+    }
+    
+    //C2O1ALT (SECOND CHOICE FIRST OPTION ALT)
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    IEnumerator Event131()
+    {
+        VariablesGlobales.loveLevel += 15;
+        Choice2Alt.SetActive(false);
+        bigAssButton.SetActive(true);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*Her face lits up instantly*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event132()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "Oh so you do enjoy my company! I thought I would have to dispose of you.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event133()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = " Let’s see, we don’t have any experiments ready for you at the moment. So how about I answer some of your questions? You must be really confused.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos = 135;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos = 135;
+        }
+    }
+
+    //C2O2ALT (SECOND CHOICE SECOND OPTION ALT)
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    IEnumerator Event134()
+    {
+        VariablesGlobales.loveLevel += 5;
+        Choice2Alt.SetActive(false);
+        bigAssButton.SetActive(true);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "I don’t think I will enjoy talking to you, but I will give you a chance to entertain me.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event135()
+    {
+        bigAssButton.SetActive(false);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "What did you have in mind?";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        Choice3Alt.SetActive(true);
+        eventActive = false;
+    }
+
+    //C3O1ALT (SECOND CHOICE SECOND OPTION ALT)
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    IEnumerator Event136()
+    {
+        option1Alt.SetActive(false);
+        Choice3Alt.SetActive(false);
+        bigAssButton.SetActive(true);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "I have told you already. This is your new home, at least for the moment. This is a trusty ship that we mostly use for exploration and reconnaissance.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos = 135;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos = 135;
+        }
+    }
+
+    //C3O3ALT (THIRD CHOICE SECOND OPTION ALT)
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    IEnumerator Event137()
+    {
+        VariablesGlobales.loveLevel += -5;
+        bigAssButton.SetActive(true);
+        option3Alt.SetActive(false);
+        Choice3Alt.SetActive(false);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "Oh, that. Yes I am married, but my husband spends so much time on intergalactic trips that it’s impossible for a woman as insatiable as myself to sit still for so many lonely nights.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event138()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "So I have to seek entertainment… Elsewhere";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event139()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*She checks you out*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event140()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "You";
+        textLines = "And… Does he know? Is he not bothered by it?";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event141()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*She smiles slyly*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event142()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "What <color=green>[frog sounds]</color> doesn’t know won’t hurt him.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos = 135;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos = 135;
+        }
+    }
+
+    //C3O4 (THIRD CHOICE FOURTH OPTION ALT)
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    IEnumerator Event143()
+    {
+        VariablesGlobales.loveLevel += 5;
+        bigAssButton.SetActive(true);
+        option4Alt.SetActive(false);
+        Choice3Alt.SetActive(false);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "Well, I am <color=green>[frog sounds]</color> but you can call me Titania.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event144()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "I am the Queen of <color=green>[unintelligible frog sounds]</color> inhabited by the <color=green>[more frog sounds]</color> a race generally thirsting for knowledge about other… Inferior races.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event145()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = " I can’t say I share their interest, but accompanying them on their enterprise is certainly more captivating than sitting around in <color=green>[frog sounds]</color>.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event146()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "And I must say…sometimes they make the most eye-catching discoveries.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event147()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
+        textLines = "*She winks(?) at you froggishly, but not entirely unattractive.*";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos = 135;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos = 135;
+        }
+    }
+
+    //C3O2 (THIRD CHOICE SECOND OPTION ALT)
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    IEnumerator Event148()
+    {
+        VariablesGlobales.loveLevel += 5;
+        bigAssButton.SetActive(true);
+        option2Alt.SetActive(false);
+        Choice3Alt.SetActive(false);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "We were really curious how a… Planet… As underdeveloped as yours could survive this long.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event149()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "We thought it was impossible for a race to survive this long without making any important discoveries, so we take specimens to experiment on and find the answer.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event150()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "You";
+        textLines = "Oh uh… Well then, what do you like the most about my planet?";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event151()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "Well, I find the patterns of the animals you humans designated as “Cows” astonishing. I even managed to commission a perfume with their smell.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos = 135;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos = 135;
+        }
+    }
+
+    //C3O5 (THIRD CHOICE FIFTH OPTION ALT)
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    IEnumerator Event152()
+    {
+        Choice3Alt.SetActive(false);
+        skipButton.SetActive(false);
+        secondSkipButton.SetActive(false);
+        bigAssButton.SetActive(true);
+        exitButton.SetActive(false);
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = " Oh dear. Look at the time! It’s almost five blingajings past niffrin! I think it’s been enough supervising for today. I am going to go back to my beauty sleep, this face won’t stay this beautiful by itself.";
+        mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
+        currentTextLength = textLines.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        if (skip)
+        {
+            eventActive = false;
+            eventPos += 1;
+            sigEvento = "Event" + eventPos;
+            StartCoroutine(sigEvento);
+        }
+        else if (!skip)
+        {
+            yield return new WaitForSeconds(0.5f);
+            eventActive = false;
+            eventPos += 1;
+        }
+    }
+    IEnumerator Event153()
+    {
+        eventActive = true;
+        NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
+        textLines = "Good night, little experiment.";
         mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
         currentTextLength = textLines.Length;
         TextCreator.runTextPrint = true;

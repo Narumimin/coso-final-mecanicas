@@ -34,6 +34,7 @@ public class Eventos1 : MonoBehaviour
     public GameObject skipButton;
     public GameObject bigAssButton;
     public GameObject secondSkipButton;
+    public GameObject exitButton;
     private int eventPos;
     private bool eventActive;
     private bool skip = false;
@@ -119,6 +120,7 @@ public class Eventos1 : MonoBehaviour
         fadeInScreen.SetActive(true);
         yield return new WaitForSeconds(2);
         skipButton.SetActive(true);
+        exitButton.SetActive(true);
         secondSkipButton.SetActive(true);
         titaniaStanding.SetActive(true);
         textBox.SetActive(true);
@@ -144,7 +146,6 @@ public class Eventos1 : MonoBehaviour
             eventPos = 1;
         }
     }
-
     IEnumerator Event1()
     {
         eventActive = true;
@@ -169,7 +170,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event2()
     {
         eventActive = true;
@@ -194,7 +194,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event3()
     {
         eventActive = true;
@@ -219,7 +218,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event4()
     {
         eventActive = true;
@@ -244,7 +242,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event5()
     {
         eventActive = true;
@@ -269,7 +266,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event6()
     {
         eventActive = true;
@@ -294,7 +290,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event7()
     {
         eventActive = true;
@@ -367,7 +362,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event10()
     {
         eventActive = true;
@@ -393,7 +387,6 @@ public class Eventos1 : MonoBehaviour
             Debug.Log(eventPos);
         }
     }
-
     IEnumerator Event11()
     {
         eventActive = true;
@@ -421,7 +414,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event12()
     {
         eventActive = true;
@@ -446,7 +438,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event13()
     {
         eventActive = true;
@@ -471,7 +462,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event14()
     {
         guardStanding.SetActive(false);
@@ -498,7 +488,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event15()
     {
         guardScared.SetActive(false);
@@ -525,7 +514,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event16()
     {   
         guardScared.SetActive(true);
@@ -552,7 +540,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event17()
     {
         guardScared.SetActive(false);
@@ -580,7 +567,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event18()
     {
         eventActive = true;
@@ -605,7 +591,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event19()
     {
         eventActive = true;
@@ -630,7 +615,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event20()
     {
         eventActive = true;
@@ -655,7 +639,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event21()
     {
         eventActive = true;
@@ -680,7 +663,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event22()
     {
         eventActive = true;
@@ -731,7 +713,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event24()
     {
         eventActive = true;
@@ -824,7 +805,6 @@ public class Eventos1 : MonoBehaviour
 
     //C1O1 (FIRST CHOICE FIRST OPTION)
     //////////////////////////////////////////////////////////////////////////////////////////////////////
-
     IEnumerator Event28()
     {
         Choice1.SetActive(false);
@@ -852,7 +832,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event29()
     {
         eventActive = true;
@@ -1047,7 +1026,6 @@ public class Eventos1 : MonoBehaviour
 
     //C1O2 (FIRST CHOICE SECOND OPTION)
     //////////////////////////////////////////////////////////////////////////////////////////////////////
-
     IEnumerator Event37()
     {
         VariablesGlobales.loveLevel += -10;
@@ -1099,7 +1077,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event39()
     {
         bigAssButton.SetActive(false);
@@ -1143,7 +1120,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event41()
     {
         eventActive = true;
@@ -1240,7 +1216,6 @@ public class Eventos1 : MonoBehaviour
             eventPos += 1;
         }
     }
-
     IEnumerator Event45()
     {
         eventActive = true;
@@ -1265,7 +1240,7 @@ public class Eventos1 : MonoBehaviour
         SceneManager.LoadScene("Lose");
     }
 
-    //C2O1 (SECOND CHOICE FIRST OPTION)
+    //SKIP OPTION
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     IEnumerator Event46()
     {

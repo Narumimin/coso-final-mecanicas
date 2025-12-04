@@ -1,0 +1,874 @@
+fileFormatVersion: 2
+guid: eb53708d2d16d4849b978ff3722647d1
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_4'
+      has translation animation that will be discarded.\n\t'royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_4'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_shouldie_jnt'
+      has translation animation that will be discarded.\n\t'royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_shouldie_jnt'
+      has translation animation that will be discarded.\n\t'royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_bilbow_jnt'
+      has translation animation that will be discarded.\n\t'royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_wrist_jnt'
+      has translation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      internalID: 1827226128182048838
+      firstFrame: 3
+      lastFrame: 27
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 1
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 1
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:root_joint
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:left_hip_joint
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:right_hip_joint
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:left_knee_joint
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:right_knee_joint
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:left_ankle_joint
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:right_ankle_joint
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:root_spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_6
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:neck_joint
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_shouldie_jnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_shouldie_jnt
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_bilbow_jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_bilbow_jnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_wrist_jnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_wrist_jnt
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_footoe_jnt
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_footoe_jnt
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:jaw_jnt
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:thumb_jnt1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:thumb_jnt2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_knckle_jnt
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_fingre_jnt
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_thumb_jnt1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_thumb_jnt2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_knckle_jnt
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_fingre_jnt
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_3
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Walk_I1(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:imagePlane1
+      parentName: Walk_I1(Clone)
+      position: {x: -0, y: 0.05814113, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:royal_guard
+      parentName: Walk_I1(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:bottom
+      parentName: Walk_I1(Clone)
+      position: {x: -0, y: -10.000999, z: 0}
+      rotation: {x: 0, y: -0.7071068, z: -0.7071068, w: 0}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:SHEILD
+      parentName: Walk_I1(Clone)
+      position: {x: -0.019574909, y: 0.056066807, z: 0.0009446898}
+      rotation: {x: -0.03155377, y: -0.6406603, z: -0.16044196, w: 0.75021136}
+      scale: {x: 4.2028217, y: 6.4707484, z: 0.29530862}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:SPEAR
+      parentName: Walk_I1(Clone)
+      position: {x: -0, y: 0.05814113, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:pCylinder5
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:SPEAR
+      position: {x: 0.10556154, y: 0.055759586, z: 0.0024092416}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.056353122, y: 0.056353122, z: 0.056353122}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:transform2
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:pCylinder5
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:pCylinder4
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:SPEAR
+      position: {x: 0.10556154, y: 0.055759586, z: -0.0024151732}
+      rotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 0.056353122, y: 0.056353122, z: 0.056353122}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:transform3
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:pCylinder4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:pCylinder3
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:SPEAR
+      position: {x: 0.10554008, y: 0.022163404, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.64599705, y: 0.057421964, z: 0.64599705}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:transform5
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:pCylinder3
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:pCylinder2
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:SPEAR
+      position: {x: 0.10554008, y: 0.024051014, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.8246455, y: 0.07330183, z: 0.8246455}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:transform6
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:pCylinder2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:pCylinder1
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:SPEAR
+      position: {x: 0.105551094, y: -0.004262158, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.12421385, y: 5.7154317, z: 0.12421385}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:transform1
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:pCylinder1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:pCylinder6
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:SPEAR
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:transform4
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:pCylinder6
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:SPEAR
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:SPEAR
+      position: {x: 0.015962714, y: 0.012122411, z: 0.021716427}
+      rotation: {x: -0.0034787604, y: 0.060735237, z: -0.054529503, w: 0.99665725}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:Character
+      parentName: Walk_I1(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.829075, y: 0.829075, z: 0.829075}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:RoyalGuard_rig
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:Character
+      position: {x: -0.005550109, y: -0.016035195, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:joints_group
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:RoyalGuard_rig
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:root_joint
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:joints_group
+      position: {x: 0.00520403, y: 0.08002779, z: 0.0003074547}
+      rotation: {x: -0.000000002910383, y: 3.3583533e-18, z: -0.0000000011539214, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:left_hip_joint
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:root_joint
+      position: {x: -0.0068657133, y: -0.005588644, z: -0.00030743348}
+      rotation: {x: 0.70258886, y: 0.7109443, z: 0.022574067, w: -0.020434577}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000004}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:left_knee_joint
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:left_hip_joint
+      position: {x: -0.030452332, y: 0, z: 0}
+      rotation: {x: 0.51315665, y: 0.06397402, z: -0.026710898, w: 0.85549057}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000005}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:left_ankle_joint
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:left_knee_joint
+      position: {x: -0.016914755, y: 0, z: 0}
+      rotation: {x: -0.48999965, y: -0.57447785, z: 0.44932675, w: -0.47747368}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_football_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:left_ankle_joint
+      position: {x: 0.0037114087, y: -0.0078842845, z: 0.007345602}
+      rotation: {x: 0.047412224, y: 0.8664221, z: 0.03277507, w: 0.49597454}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000004}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_footoe_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_football_jnt
+      position: {x: -0.0050783893, y: 0.00054370554, z: -0.0019784442}
+      rotation: {x: -0.052599017, y: -0.85728395, z: -0.048120156, w: 0.5098844}
+      scale: {x: 0.9999995, y: 1, z: 0.9999997}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:right_hip_joint
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:root_joint
+      position: {x: 0.00755787, y: -0.0055886446, z: -0.0003074783}
+      rotation: {x: 0.150335, y: -0.108371444, z: -0.7184571, w: 0.6704286}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:right_knee_joint
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:right_hip_joint
+      position: {x: 0.03068834, y: 0, z: 0.00000009532849}
+      rotation: {x: -0.50319743, y: -0.02947361, z: 0.034872957, w: -0.86296445}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:right_ankle_joint
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:right_knee_joint
+      position: {x: 0.016914768, y: -0.000000037150873, z: -0.000000030803815}
+      rotation: {x: -0.48302633, y: -0.54485375, z: 0.44745338, w: -0.5192354}
+      scale: {x: 0.99999994, y: 1.000001, z: 1.0000013}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_football_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:right_ankle_joint
+      position: {x: 0.00045093073, y: 0.008934815, z: -0.007600646}
+      rotation: {x: -0.5646726, y: -0.47288346, z: -0.49711856, w: -0.4586929}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_footoe_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_football_jnt
+      position: {x: -0.00024502477, y: -0.005081455, z: 0.0022629395}
+      rotation: {x: 0.5570528, y: 0.4732404, z: 0.5047461, w: -0.4593117}
+      scale: {x: 1, y: 0.9999995, z: 0.9999997}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:root_spine
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:root_joint
+      position: {x: 0.00007672557, y: 0.0032224953, z: -0.0021338803}
+      rotation: {x: 0.47992122, y: -0.519303, z: -0.47992122, w: 0.519303}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_2
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:root_spine
+      position: {x: -0.0061462913, y: 2.6645352e-17, z: 0}
+      rotation: {x: 0.000000029802322, y: -0.000000029802322, z: -0.024242714, w: 0.99970615}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_3
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_2
+      position: {x: -0.005323455, y: 0, z: 0}
+      rotation: {x: -0.9995111, y: 0.03126524, z: -0.0000000024132822, w: -0.00000006048112}
+      scale: {x: 0.99999994, y: 0.9999997, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_4
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_3
+      position: {x: -0.0050039664, y: 0.00000007366799, z: 0.0000030448807}
+      rotation: {x: 0.99883205, y: -0.048318, z: 0.000000030015492, w: -0.000000029587616}
+      scale: {x: 1, y: 1.0000001, z: 0.9999999}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_5
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_4
+      position: {x: -0.005008919, y: 0, z: 0}
+      rotation: {x: 1.7763564e-15, y: -3.8857797e-15, z: -0.032207806, w: 0.9994812}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_6
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_5
+      position: {x: -0.00403107, y: 0, z: 5.4691716e-12}
+      rotation: {x: 0.000000030952872, y: -0.000000028605532, z: 0.0007725543, w: 0.99999976}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:neck_joint
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_6
+      position: {x: -0.004423763, y: -0.000001274628, z: 1.5543122e-17}
+      rotation: {x: -0.9949402, y: 0.06834662, z: 0.010413177, w: -0.07290006}
+      scale: {x: 1.0000001, y: 0.99999976, z: 0.99999964}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:jaw_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:neck_joint
+      position: {x: -0.006493301, y: 0.0000048163206, z: 1.11022296e-17}
+      rotation: {x: 0.07229344, y: 0.009251723, z: -0.0663813, w: 0.995129}
+      scale: {x: 1.0000007, y: 1.0000005, z: 1.0000005}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:top_head_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:jaw_jnt
+      position: {x: -0.008021248, y: 0.000005787494, z: 0}
+      rotation: {x: 0.4920566, y: -0.50781906, z: 0.49205676, w: 0.50781906}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1.0000001}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:chin_bone
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:jaw_jnt
+      position: {x: 0.005580756, y: -0.0076287733, z: -0.00010387338}
+      rotation: {x: -0, y: -0, z: 0.0000000071595405, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_shouldie_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_5
+      position: {x: 0.00014147285, y: 0.00019619502, z: 0.012663548}
+      rotation: {x: -0.48067486, y: 0.51889, z: 0.5186173, w: 0.48035508}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000002}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_bilbow_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_shouldie_jnt
+      position: {x: -0.015521412, y: -0.000046100304, z: -1.7763568e-17}
+      rotation: {x: 0.0021262018, y: 0.023182778, z: -0.061487205, w: 0.99783635}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_wrist_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_bilbow_jnt
+      position: {x: -0.015390411, y: 0.000008236696, z: -0.000003358834}
+      rotation: {x: 0.005732608, y: -0.04634648, z: -0.15222046, w: 0.98724276}
+      scale: {x: 1, y: 0.9999998, z: 0.9999998}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_knckle_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_wrist_jnt
+      position: {x: -0.0073068454, y: 0, z: 0}
+      rotation: {x: -0.007001729, y: 0.040170662, z: 0.10321395, w: 0.99382305}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1.0000002}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_fingre_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_knckle_jnt
+      position: {x: -0.005550561, y: 0, z: 0}
+      rotation: {x: 0.0051876013, y: -0.1501243, z: 0.03414258, w: 0.9880639}
+      scale: {x: 0.99999976, y: 0.99999994, z: 0.9999999}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:thumb_jnt1
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_wrist_jnt
+      position: {x: -0.0016111175, y: -0.0022638305, z: 0.003721326}
+      rotation: {x: -0.046603765, y: 0.33213437, z: 0.12578687, w: 0.9336448}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:thumb_jnt2
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:thumb_jnt1
+      position: {x: -0.0036207612, y: 0, z: 0}
+      rotation: {x: -0.06837676, y: 0.58801436, z: 0.007653621, w: 0.8059188}
+      scale: {x: 1.0000002, y: 0.9999999, z: 0.9999997}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_shouldie_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:spine_jnt_5
+      position: {x: -0.00004491331, y: 0.00013424535, z: -0.013032492}
+      rotation: {x: 0.5190714, y: 0.47885868, z: -0.48006436, w: 0.52038205}
+      scale: {x: 1.0000006, y: 1.0000006, z: 1.000001}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_bilbow_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_shouldie_jnt
+      position: {x: 0.01531245, y: -0.000014389455, z: -0.00006233521}
+      rotation: {x: 0.0021260376, y: 0.02318267, z: -0.061487213, w: 0.9978364}
+      scale: {x: 1.0000007, y: 1.0000002, z: 0.99999976}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_wrist_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_bilbow_jnt
+      position: {x: 0.015365265, y: 0.00000026243808, z: -0.0000007837973}
+      rotation: {x: 0.0057327203, y: -0.046346396, z: -0.1522205, w: 0.98724276}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_knckle_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_wrist_jnt
+      position: {x: 0.0073067555, y: 0.000000013334503, z: 0.000000027019873}
+      rotation: {x: -0.0070017716, y: 0.04017067, z: 0.10321395, w: 0.99382305}
+      scale: {x: 0.9999999, y: 1.0000005, z: 1.0000005}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_fingre_jnt
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_knckle_jnt
+      position: {x: 0.0055505764, y: -0.000000062870186, z: 0.00000004217939}
+      rotation: {x: 0.005187637, y: -0.15012442, z: 0.034142584, w: 0.9880638}
+      scale: {x: 1.0000002, y: 0.9999999, z: 1.0000001}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_thumb_jnt1
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_wrist_jnt
+      position: {x: 0.001611103, y: 0.0022638284, z: -0.0037213203}
+      rotation: {x: -0.04676099, y: 0.33201918, z: 0.12525518, w: 0.9337494}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_thumb_jnt2
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_thumb_jnt1
+      position: {x: 0.0036206746, y: -0.00000003971913, z: 0.00000003853391}
+      rotation: {x: -0.06837677, y: 0.58801436, z: 0.0076536397, w: 0.80591875}
+      scale: {x: 1.0000004, y: 1, z: 1.0000001}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_foot_ctrl1
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:RoyalGuard_rig
+      position: {x: 0.00443276, y: 0.09818397, z: 0.04250525}
+      rotation: {x: 0.19216222, y: -0.0030089368, z: 0.015364537, w: 0.9812383}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_toe_ctrl_group
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_foot_ctrl1
+      position: {x: 0.018007834, y: -0.05806882, z: 0.068307206}
+      rotation: {x: 0.002229863, y: 0.08378783, z: -0.026510175, w: 0.99612844}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_heel_ctrl_group
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_toe_ctrl_group
+      position: {x: 0.0017742517, y: 0.00001391011, z: -0.017296564}
+      rotation: {x: -0.0004155879, y: -0.020691536, z: -0.020076573, w: 0.99958426}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_football_ik
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_heel_ctrl_group
+      position: {x: 0.0001296556, y: 0.001496067, z: 0.010401906}
+      rotation: {x: 0.029080957, y: -0.2446603, z: -0.022239482, w: 0.9689175}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_anke_group____________
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_heel_ctrl_group
+      position: {x: 0.00033686162, y: 0.00089951133, z: 0.010401908}
+      rotation: {x: 0.0003219681, y: 0.042894073, z: -0.007499001, w: 0.99905145}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:left_leg
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_anke_group____________
+      position: {x: 0.00023732423, y: 0.0097981645, z: -0.007480154}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_toe_group
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_heel_ctrl_group
+      position: {x: 0.00014725208, y: 0.0018603287, z: 0.010105802}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_footoe_ik
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_toe_group
+      position: {x: -0.0011755693, y: -0.00021469593, z: 0.0051401854}
+      rotation: {x: 0.07121279, y: 0.75719154, z: 0.06854741, w: 0.64567095}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_foot_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:RoyalGuard_rig
+      position: {x: 0.0037432835, y: 0.072817504, z: -0.0005013663}
+      rotation: {x: -0.005433336, y: 0.00008507688, z: 0.015656166, w: 0.99986273}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_toe_ctrl_group
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_foot_ctrl
+      position: {x: -0, y: -0.058017753, z: 0.068128705}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_heelt_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_toe_ctrl_group
+      position: {x: 0.030496087, y: -0.000014794086, z: -0.017115457}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_football_ik
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_heelt_ctrl
+      position: {x: 0.000060689446, y: 0.0014669084, z: 0.010342426}
+      rotation: {x: 0.9986941, y: -0.023315825, z: -0.042881634, w: -0.015084183}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_ankle_group
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_heelt_ctrl
+      position: {x: 0.000060690585, y: 0.0011339709, z: 0.0103424275}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:right_leg_ik
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_ankle_group
+      position: {x: -0.00066678284, y: 0.009518585, z: -0.0072789667}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_toe_group
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_heelt_ctrl
+      position: {x: 0.00026280517, y: 0.0014669081, z: 0.0103424275}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_footoe_ik
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_toe_group
+      position: {x: 0.0020608234, y: -0.0005710506, z: 0.005055208}
+      rotation: {x: -0.4582636, y: 0.53851134, z: -0.4582636, w: 0.53851134}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:RoyalGuard_world_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:Character
+      position: {x: 0.02363635, y: 0.000061473846, z: 0.058712263}
+      rotation: {x: 0, y: 0, z: 0.015656395, w: 0.99987745}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:root_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:RoyalGuard_world_ctrl
+      position: {x: 0.0012399901, y: 0.061390445, z: 0.0031031745}
+      rotation: {x: 0.032120217, y: -0.0012240114, z: 0.0067711454, w: 0.99946034}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lwr_spine_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:root_ctrl
+      position: {x: 0.000074921554, y: 0.0031988584, z: -0.002183891}
+      rotation: {x: 0, y: 0, z: 0.012250252, w: 0.99992496}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:mid_spine_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lwr_spine_ctrl
+      position: {x: -0, y: 0.0061272266, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:chest_spine_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:mid_spine_ctrl
+      position: {x: -0, y: 0.01031954, z: 0}
+      rotation: {x: 0.003131038, y: -0.0029535815, z: -0.06383933, w: 0.997951}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_shouldie_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:chest_spine_ctrl
+      position: {x: -0.012712408, y: 0.004806883, z: -0.0010439341}
+      rotation: {x: 0.0386259, y: -0.024301762, z: 0.50523865, w: 0.86177224}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_bilbow_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_shouldie_ctrl
+      position: {x: -0.014802481, y: -0.0030213904, z: 0.000390954}
+      rotation: {x: 0, y: 0, z: 0.08467037, w: 0.99640906}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_wristie_ctrl1
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_bilbow_ctrl
+      position: {x: -0.015668515, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.16282612, w: 0.9866548}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_shouldie_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:chest_spine_ctrl
+      position: {x: 0.013053886, y: 0.004806883, z: -0.0010439341}
+      rotation: {x: -0.13470665, y: -0.08897685, z: -0.5959318, w: 0.78664}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_bilbow_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_shouldie_ctrl
+      position: {x: 0.014802481, y: -0.0030213904, z: 0.000390954}
+      rotation: {x: -0.18475688, y: -0.5690824, z: -0.0045319106, w: 0.80124253}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_wristie_ctrl1
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:r_bilbow_ctrl
+      position: {x: 0.015668515, y: 0, z: 0}
+      rotation: {x: 0.0054376284, y: 0.006855654, z: -0.08407017, w: 0.99642146}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:neck_ctrl1
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:chest_spine_ctrl
+      position: {x: -0, y: 0.013453352, z: -0.00045196532}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.8130279, y: 0.8130279, z: 0.8130279}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:head_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:neck_ctrl1
+      position: {x: -4.440892e-18, y: 0.007986466, z: -8.881784e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.22997, y: 1.22997, z: 1.22997}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_foot_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:RoyalGuard_world_ctrl
+      position: {x: -0.0025198322, y: 0.018494593, z: 0.016234295}
+      rotation: {x: 0.19209155, y: -0.006017135, z: -2.046263e-11, w: 0.9813586}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_foot_ctrl1
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:RoyalGuard_world_ctrl
+      position: {x: 0.006531641, y: 0.010685092, z: -0.004646669}
+      rotation: {x: -0.005431338, y: 0.0001701329, z: 2.1830343e-14, w: 0.9999853}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:rt_knee_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:RoyalGuard_world_ctrl
+      position: {x: 0.006833081, y: 0.028369997, z: 0.012080226}
+      rotation: {x: 0.7055258, y: 0.047257606, z: -0.013062731, w: 0.7069861}
+      scale: {x: 0.22183315, y: 0.22183315, z: 0.22183315}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:lft_knee_ctrl
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:RoyalGuard_world_ctrl
+      position: {x: -0.007305671, y: 0.043651648, z: 0.03897562}
+      rotation: {x: 0.7055258, y: 0.047257606, z: -0.013062731, w: 0.7069861}
+      scale: {x: 0.22183315, y: 0.22183315, z: 0.22183315}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:detalle_estrelloso
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:Character
+      position: {x: -0.009070874, y: 0.031487316, z: -0.0335367}
+      rotation: {x: 0.01607166, y: -0.00030580434, z: 0.009508798, w: 0.9998256}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:detalle_estrelloso1
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:Character
+      position: {x: 0.0016510678, y: 0.030481951, z: -0.03575634}
+      rotation: {x: 0.01760731, y: -0.19367912, z: 0.0062207826, w: 0.98088723}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:detalle_estrelloso2
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:Character
+      position: {x: -0.02043354, y: 0.029783854, z: -0.02581163}
+      rotation: {x: 0.013697213, y: 0.21114598, z: 0.01269259, w: 0.97727615}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:detalle_estrelloso3
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:Character
+      position: {x: -0.037742242, y: 0.08727847, z: -0.03125816}
+      rotation: {x: -0.107183, y: -0.06705133, z: -0.63375795, w: 0.7631296}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:detalle_estrelloso4
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:Character
+      position: {x: 0.022769378, y: 0.06012862, z: -0.037656978}
+      rotation: {x: 0.06807879, y: -0.043851443, z: 0.46494657, w: 0.8816275}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:shoulder_cosos
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:Character
+      position: {x: 0.02143331, y: 0.08933511, z: 0.056600705}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:polySurface1
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:shoulder_cosos
+      position: {x: -0.053786058, y: -0.0025253678, z: -0.08328697}
+      rotation: {x: -0.107183, y: -0.06705133, z: -0.63375795, w: 0.7631296}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:polySurface2
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:shoulder_cosos
+      position: {x: -0.0013226271, y: -0.02513493, z: -0.08727098}
+      rotation: {x: 0.06807879, y: -0.043851443, z: 0.46494657, w: 0.8816275}
+      scale: {x: 1, y: 1, z: 1}
+    - name: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:transform7
+      parentName: royal_guard_uwu_FULL_RIG_NO_WEIGHTS_Mautry_2:shoulder_cosos
+      position: {x: -0.025209166, y: -0.09350407, z: -0.056600705}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

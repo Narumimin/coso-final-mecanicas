@@ -18,6 +18,7 @@ public class Movment : MonoBehaviour
     public int Enemy_Damage = 20;
     public GameObject prueba;
     public Playeritems personaje_ref;
+    public Animator animator;
 
     public enum EnumStates
     {
@@ -36,6 +37,7 @@ public class Movment : MonoBehaviour
 
     private void GotoNextpoint()
     {
+        animator.SetBool("Walking", true);
         currentindex++;
 
         if (currentindex >= patrolPoints.Length)
@@ -57,6 +59,7 @@ public class Movment : MonoBehaviour
         switch (currentstate)
         {
             case EnumStates.patrol:
+                animator.SetBool("Walking", true);
                 prueba.SetActive(false);
                 if (agent.remainingDistance < 1)
                 {
@@ -65,6 +68,7 @@ public class Movment : MonoBehaviour
                 }
                 break;
             case EnumStates.wait:
+                animator.SetBool("Walking", false);
                 prueba.SetActive(false);
                 currentTime += Time.deltaTime;
                 if (currentTime > maxtimetowait)
@@ -75,6 +79,7 @@ public class Movment : MonoBehaviour
                 }
                 break;
             case EnumStates.chase:
+                animator.SetBool("Walking", true);
                 prueba.SetActive(true);
                 agent.SetDestination(personaje.position);
                 if (agent.remainingDistance < 1)

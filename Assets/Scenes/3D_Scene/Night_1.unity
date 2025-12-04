@@ -4966,7 +4966,7 @@ MonoBehaviour:
   Seconds: 360
   Maxseconds: 0
   count: 1
-  scenenum: 4
+  scenenum: 6
   dAYTIME: {fileID: 790835632}
 --- !u!4 &188385293
 Transform:
@@ -17468,7 +17468,7 @@ MonoBehaviour:
   Enemy:
   - {fileID: 1140153254}
   active: 0
-  scenenum: 4
+  scenenum: 6
 --- !u!1001 &592825241
 PrefabInstance:
   m_ObjectHideFlags: 0

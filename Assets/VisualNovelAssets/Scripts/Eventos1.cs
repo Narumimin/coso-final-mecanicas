@@ -12,6 +12,14 @@ public class Eventos1 : MonoBehaviour
 
     [Header("Titania Sprites and stuff")]
     public GameObject titaniaStanding;
+    public GameObject titaniaStandingRight;
+    public GameObject titaniaShining;
+    public GameObject titaniaEmbarassed;
+
+    [Header("Guard Sprites")]
+    public GameObject guardStanding;
+    public GameObject disgustedGuard;
+    public GameObject guardScared;
 
     [Header("Stuff for text")]
     public GameObject NameText;
@@ -389,6 +397,9 @@ public class Eventos1 : MonoBehaviour
     IEnumerator Event11()
     {
         eventActive = true;
+        titaniaStanding.SetActive(false);
+        titaniaStandingRight.SetActive(true);
+        guardStanding.SetActive(true);
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
         textLines = "*In the hallway, you both run into a guard, he looks concerned.*";
         mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
@@ -463,6 +474,8 @@ public class Eventos1 : MonoBehaviour
 
     IEnumerator Event14()
     {
+        guardStanding.SetActive(false);
+        guardScared.SetActive(true);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
         textLines = "*She gives him a disapproving look, the guard stares in horror*";
@@ -488,6 +501,8 @@ public class Eventos1 : MonoBehaviour
 
     IEnumerator Event15()
     {
+        guardScared.SetActive(false);
+        disgustedGuard.SetActive(true);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Guard";
         textLines = "Your Majesty…! The King will be back in just 7 days, it is not seemly for the Queen to be fooling around with… These things.";
@@ -512,7 +527,9 @@ public class Eventos1 : MonoBehaviour
     }
 
     IEnumerator Event16()
-    {
+    {   
+        guardScared.SetActive(true);
+        disgustedGuard.SetActive(false);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Alien Queen";
         textLines = "I don’t think you understand, I said it <color=red>does not concern you</color>. Guards! Dispose of this… Filth.";
@@ -538,6 +555,9 @@ public class Eventos1 : MonoBehaviour
 
     IEnumerator Event17()
     {
+        guardScared.SetActive(false);
+        titaniaStandingRight.SetActive(false);
+        titaniaStanding.SetActive(true);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
         textLines = "*Guards rush to the site, taking him to a room labeled with symbols you can’t seem to understand.*";
@@ -792,7 +812,7 @@ public class Eventos1 : MonoBehaviour
         secondSkipButton.SetActive(false);
         eventActive = true;
         NameText.GetComponent<TMPro.TMP_Text>().text = "Narrator";
-        textLines = "*She’s waiting for an answer, and doesn’t look very patient.*\n*What will you say?*\n";
+        textLines = "*She’s waiting for an answer, and doesn’t look very patient.*\n*What will you say?*";
         mainTextObject.GetComponent<TMPro.TMP_Text>().text = textLines;
         currentTextLength = textLines.Length;
         TextCreator.runTextPrint = true;
@@ -1030,6 +1050,7 @@ public class Eventos1 : MonoBehaviour
 
     IEnumerator Event37()
     {
+        VariablesGlobales.loveLevel += -10;
         Choice1.SetActive(false);
         bigAssButton.SetActive(true);
         eventActive = true;
@@ -1248,6 +1269,7 @@ public class Eventos1 : MonoBehaviour
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     IEnumerator Event46()
     {
+        skip = false;
         secondSkipButton.SetActive(false);
         eventActive = true;
         TextCreator.runTextPrint = false;
